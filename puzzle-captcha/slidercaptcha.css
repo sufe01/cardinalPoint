@@ -1,0 +1,217 @@
+body {
+    overflow-x: hidden;
+}
+
+.block {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 0;
+    margin-top: 22px;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.01);
+    /* border: 2px solid #5b34b3; */
+    /* border-radius: 0 0 14px 14px; */
+    margin-top: 3px;
+}
+
+.sliderContainer {
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+    background: #f7f9fa;
+    color: #45494c;
+    border-radius: 2px;
+}
+
+.sliderbg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #f7f9fa;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #e6e8eb;
+    transition: 0ms !important;
+}
+
+.sliderContainer_active .slider {
+    top: -1px;
+    border: 1px solid #5b34b3;
+}
+
+.sliderContainer_active .sliderMask {
+    border-width: 1px 0 1px 1px;
+}
+
+.sliderContainer_success .slider {
+    top: -1px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff !important;
+}
+
+.sliderContainer_success .sliderMask {
+    border: 1px solid #5b34b3;
+    border-width: 1px 0 1px 1px;
+    background-color: #5b34b3;
+}
+
+.sliderContainer_success .sliderIcon:before {
+    content: "\f00c";
+}
+
+.sliderContainer_fail .slider {
+    top: -1px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff !important;
+}
+
+.sliderContainer_fail .sliderMask {
+    border: 1px solid #5b34b3;
+    background-color: #5b34b3;
+    border-width: 1px 0 1px 1px;
+}
+
+.sliderContainer_fail .sliderIcon:before {
+    content: "\f00d";
+}
+
+.sliderContainer_active .sliderText,
+.sliderContainer_success .sliderText,
+.sliderContainer_fail .sliderText {
+    display: none;
+    transition: 0ms !important;
+}
+
+.sliderMask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    border: 0 solid #5b34b3;
+    background: #5b34b3;
+    border-radius: 2px;
+    transition: 0ms !important;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background 0.2s linear !important;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider:hover {
+    background: #fff;
+}
+
+.slider:hover .sliderIcon {
+    background-position: 0 -13px;
+}
+
+.sliderText {
+    position: relative;
+}
+
+.refreshIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    margin: 6px;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 1rem;
+    z-index: 5;
+    transition: color 0.3s linear;
+}
+
+.refreshIcon:hover {
+    color: #5b34b3;
+}
+
+.sliderContainer {
+    height: 40px !important;
+}
+
+/* .card-header {
+    border-color: #ffffff;
+} */
+
+.slidercaptcha.card {
+    margin-bottom: 20px;
+    /* max-width: 400px; */
+    width: 100% !important;
+    background-color: transparent;
+    border-radius: 4px !important;
+}
+
+.slidercaptcha.card .card-header {
+    background-color: #F7BC37 !important;
+    border-radius: 15px;
+    padding: 12px 25px;
+}
+
+.slidercaptcha.card .card-header span {
+    font-size: 18px !important;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.slidercaptcha.card .card-body{
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+html.rts-dark .slidercaptcha.card .card-body{
+    background-color: #1e1e1e;
+}
+button:disabled,
+button:hover:disabled,
+button:disabled::before,
+button:disabled::after {
+    background-color: lightgray !important;
+    color: gray !important;
+    border-color: lightgray !important;
+    pointer-events: none !important;
+}
+
+.refreshIcon {
+    color: #ffffff;
+}
+
+.refreshIcon {
+    font-size: 1.25rem;
+}
